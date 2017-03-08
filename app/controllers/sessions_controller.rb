@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       flash.now[:danger] = 'Combinación email/password no valida. 
-      <ul><li>lamancar@gmail.com </li>
+      <ul><li>orientador@gmail.com </li>
+      <li>profe@gmail.com </li>
       <li>padre@gmail.com</li>
       <li>madre@gmail.com</li>
       </ul>'.html_safe
