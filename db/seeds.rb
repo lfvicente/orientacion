@@ -8,3 +8,8 @@
 
 User.create(name: "Laura Manzaneque", email: "lamancar@gmail.com", rol: "orientador", password: "123456", password_confirmation: "123456")
 User.create(name: "Luis Vicente", email: "lfvicente@gmail.com", rol: "familia", password: "123456", password_confirmation: "123456")
+
+User.create(name: "Mario Padre Alumno", email: "padre@gmail.com", rol: "familia", password: "123456", password_confirmation: "123456")
+User.create(name: "Maria Madre Alumno", email: "madre@gmail.com", rol: "familia", password: "123456", password_confirmation: "123456")
+
+

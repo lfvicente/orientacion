@@ -23,19 +23,34 @@
         
         <nav>
           <ul class="nav navbar-nav navbar-right">
-			<!--<li><%= link_to "Alumnos",   'alumnos' %></li>
-            <li><%= link_to "Plan",   'plan' %></li>
-            <li><%= link_to "Mensajes", 'mensajes' %></li>
+            <% if logged_in? %>
+              <li><%= link_to current_user.rol,   '#' %></li>
+                <% if current_user.rol=='orientador' %>
+                  <li><%= link_to "Plan",   'plan' %></li>
+                  <li><%= link_to "Alumnos",   'alumnos' %></li>              
+                <% end %>
+                <li><%= link_to "Mensajes", 'mensajes' %></li>
+            <% end %>
+			
             <li><%= link_to "Blog", 'blog' %></li>
             <li><%= link_to "Avisos", '#' %></li>
-            <li><%= link_to "Recursos", '#' %></li>-->
-            <li><%= link_to "Iniciar Sesión", signup_path %></li>
+            <li><%= link_to "Recursos", '#' %></li>
+
+            <% if logged_in? %>
+              <li><%= link_to "Cerrar Sesión", logout_path, method: "delete" %></li>
+            <% else %>
+              <li><%= link_to "Iniciar Sesión", login_path %></li>
+            <% end %>
           </ul>
         </nav>
       </div>
     </header>
+
     <div class="container">
+      <div class="jumbotron">
+      <%= render 'layouts/flash' %>
       <%= yield %>
+      </div>
     </div>
   </body>
 </html>
