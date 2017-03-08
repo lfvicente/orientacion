@@ -1,2 +1,56 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="jumbotron">
+	<div class="row center">
+	  <h1><%= image_tag('orientation.png', width: '50') %> Orientod@s</h1>
+
+	  <h2> Plataforma del Departamento de Orientación </h2>
+	  <br/><br/>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-md-4">
+			<div id="datepicker"></div>
+			<input type="hidden" id="my_hidden_input">
+		</div>
+		<div class="col-xs-8 col-md-8">
+		    <h3>
+		      <%= image_tag('bell.png',size:'28') %> Avisos
+		    </h3>
+		    <ul>
+		    	<li><strong>Grupo 1º E.S.O A.</strong> Os recordamos que el viernes 6 de Marzo es el último día para entregar la autorización para la excursión al teatro. </li>
+		    	<li><strong>Grupo 2º E.S.O A.</strong> Os recordamos que durante la clase de Tutoría, la Policia Local nos dará una charla por lo que tenéis que ir a la Biblioteca.</li>
+		    	<li><strong>AVISO PARA TUTORES 1º E.S.O.</strong> La reunión semanal se retrasa una hora por temas organizativos. </li>
+		    </ul>
+	    </div>
+    
+    </div>
+</div>
+
+<script>
+  
+  $(document).ready(function () {
+    $('#datepicker').datepicker({
+        startDate: "01/11/2016", 
+        endDate: "30/11/2016", 
+          format: "dd/mm/yyyy",
+          weekStart: 1,
+          language: "es",
+          multidate: true,
+          daysOfWeekDisabled: "0,6", 
+      beforeShowDay: function (date) {
+          if (date.getMonth()==10){
+          switch(date.getDate()){           
+            case 1: case 2:  case 3: case 4: case 21: case 22:  case 23: case 24: case 25:
+              return {tooltip: 'Educación Vial',classes: 'alert-info'};
+            case 7: case 8:  case 9: case 10: case 11:
+              return {tooltip: 'Preparación para simulacro de incendio',classes: 'alert-danger'};
+            case 14: case 15: case 16: case 17: case 18:
+              return {tooltip: 'Preparación 1º Evaluación',classes: 'alert-warning'};
+            case 28: case 29: case 30: 
+              return {tooltip: 'Entrenamiento toma de decisiones',classes: 'alert-success'};
+            
+          }
+        }
+        }
+      });
+        
+    });
+</script>

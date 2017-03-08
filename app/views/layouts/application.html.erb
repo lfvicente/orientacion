@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Orientados</title>
+    <title>Orient@dos :: Plataforma del Departamento de Orientación</title>
+    <%= favicon_link_tag 'orientation.ico' %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+        <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   </head>
-
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+      	<%= link_to "Orientod@s #{image_tag('orientation.png',size:'24' )}".html_safe, root_path, id: 'logo' %>
+        
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+			<!--<li><%= link_to "Alumnos",   'alumnos' %></li>
+            <li><%= link_to "Plan",   'plan' %></li>
+            <li><%= link_to "Mensajes", 'mensajes' %></li>
+            <li><%= link_to "Blog", 'blog' %></li>
+            <li><%= link_to "Avisos", '#' %></li>
+            <li><%= link_to "Recursos", '#' %></li>-->
+            <li><%= link_to "Iniciar Sesión", signup_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
