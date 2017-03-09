@@ -1,0 +1,93 @@
+
+<div class="jumbotron">
+	<h1> Pulido Montes, Gabriel </h1>
+
+	<%= link_to "<< Volver",   'alumnos', class: 'btn btn-primary' %><br/><br/>
+
+	<table class="table">
+		<tr><th>F.NACIMIENTO</th><td>2004/04/22</td></tr>
+		<tr><th>DIRECCIÓN</th><td>Avenida del Progreso, 6. P9 4ºA </td></tr>
+		<tr><th>TELÉFONO</th><td>366 566 688 / 398 6645 121</td></tr>
+		
+	</table>
+
+	<table class="table">	
+		<tr><th>CURSO</th><td>1 A</td></tr>
+		<tr><th>TUTOR</th><td>Cartagena Lago, José Luis</td><td><%= mail_to "cartagenaljl@ymail.com", 'cartagenaljl@ymail.com' %></td></tr>
+	</table>
+	<br/><br/>
+	<h3><%= image_tag('owl.png',size:'40') %> Incidencias </h3>
+	<table class="table">
+	<thead>
+		<tr><th> Origen </th><th> Tipo </th><th>Detalle</th><th>Fecha</th></tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Profesor Matemáticas</td>
+			<td> Seguimiento General </td>
+			<td>Resuelvo dudas con el alumno sobre el ultimo tema</td>
+			<td>06/03/2016</td>
+		</tr>
+		<tr>
+			<td>Profesor Lengua </td>
+			<td> Seguimiento General </td>
+			<td>El alumno me consulta como resolver las tareas para casa </td>
+			<td>21/02/2016</td>
+		</tr>
+		<tr>
+			<td> Secretaría </td>
+			<td> Otros </td>
+			<td>Llamada a los padres para informar de retraso </td>
+			<td>09/02/2016</td>
+		</tr>
+		<tr>
+			<td>Orientador </td>
+			<td> Progreso Académico </td>
+			<td> Cito al alumno para comentar el progreso en la segunda evaluación </td>
+			<td>08/02/2016</td>
+		</tr>
+	</tbody>	
+	</table>
+
+
+		<br/><br/>
+	<h3><%= image_tag('history.png',size:'40') %> Notas </h3>
+	<table class="table">
+	<thead>
+		<tr>
+			<th> Evaluación </th>
+			<th> Asignatura </th>
+			<th> Nota</th>
+			<th>Fecha</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> Primera </td>
+			<td> Historia  </td>
+			<td> 8  </td>
+			<td> 24/11/2016</td>
+		</tr>		
+		<tr>
+			<td> Primera </td>
+			<td> Latín </td>
+			<td> 7,5 </td>
+			<td> 24/11/2016</td>
+		</tr>		
+		<tr>
+			<td> Primera </td>
+			<td> Matemáticas </td>
+			<td> 5,5 </td>
+			<td> 24/11/2016</td>
+		</tr>		<tr>
+			<td> Primera </td>
+			<td> Lengua </td>
+			<td> 7,8 </td>
+			<td> 24/11/2016</td>
+		</tr>
+	</tbody>	
+	</table>
+
+	<%= link_to "<< Volver",   'alumnos', class: 'btn btn-primary' %>
+</div>
+
