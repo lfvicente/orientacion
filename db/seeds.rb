@@ -8,8 +8,8 @@
 
 User.destroy_all
 User.create(name: "Orientador/a del Centro", email: "orientador@gmail.com", rol: "orientador", password: "123456", password_confirmation: "123456")
-User.create(name: "Profesor/a del Centro ", email: "profesos@gmail.com", rol: "docente", password: "123456", password_confirmation: "123456")
-User.create(name: "Profesor/a del Centro ", email: "profesos@gmail.com", rol: "docente", password: "123456", password_confirmation: "123456")
+User.create(name: "Profesor/a del Centro ", email: "profe@gmail.com", rol: "docente", password: "123456", password_confirmation: "123456")
+User.create(name: "Profesor/a del Centro ", email: "profesor@gmail.com", rol: "docente", password: "123456", password_confirmation: "123456")
 
 User.create(name: "Mario Padre Alumno", email: "padre@gmail.com", rol: "familia", password: "123456", password_confirmation: "123456")
 User.create(name: "María Madre Alumno", email: "madre@gmail.com", rol: "familia", password: "123456", password_confirmation: "123456")
