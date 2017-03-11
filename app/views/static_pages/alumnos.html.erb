@@ -1,9 +1,17 @@
 
+<% if (current_user.rol=='orientador' || current_user.rol=='docente')  %>
+
 <div class="jumbotron">
 <div class="row center">
 <h1><%= image_tag('book.png',size:'50') %>Alumnos</h1>
 </div>
-<p>Relación de alumnos</p>
+
+<% if current_user.rol=='docente' %>
+	<p>Listado de alumnos clase 1 A </p>
+<%  elsif current_user.rol=='orientador' %>
+	<p> Consulta de alumnos orientados </p>
+<% end %>
+
 <table class="table">
 	<thead>
     <th><%= image_tag('book.png',size:'12') %><%= image_tag('book-1.png',size:'12') %> </th>
@@ -81,3 +89,4 @@
 	</tbody>
 </table>
 </div>
+<% end %> 

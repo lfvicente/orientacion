@@ -21,6 +21,12 @@ Rails.application.routes.draw do
 	get '/actividad8', to: 'static_pages#actividad8'
 	get '/actividad9', to: 'static_pages#actividad9'
 
+	get '/8155', to: 'static_pages#8155'
+	get '/8156', to: 'static_pages#8156'
+	get '/8157', to: 'static_pages#8157'
+	get '/8158', to: 'static_pages#8158'
+	get '/8159', to: 'static_pages#8159'
+	get '/8160', to: 'static_pages#8160'
 	
 
 	get  '/signup',  to: 'users#new'

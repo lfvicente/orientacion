@@ -1,33 +1,18 @@
 
 <div class="jumbotron">
 	<div class="row center">
-		<h1><%= image_tag('paper-plane.png',size:'50') %>  Mensajes </h1>
+		<h1><%= image_tag('paper-plane.png',size:'50') %>  Mensajes <%= current_user.rol.capitalize %></h1><br/>
 	</div>
 
-	<% if current_user.rol=='orientador' %>
+<% if current_user.rol=='orientador' %>
+  <%= render 'buzon1' %>
+   
+<% elsif current_user.rol=='docente' %>
+    <%= render 'buzon2' %>
 
-  <div class="row">
-      <table class="table">
-        <thead><th></th><th>Autor </th><th> Asunto </th><th>Fecha</th></thead>
-        <tr><td><%= image_tag('email.png',size:'24') %></td><td>José García</td><td>RV: Nuevos horarios </td><td>25/11/2016 12:33</td></tr>
-        <tr><td><%= image_tag('email.png',size:'24') %></td><td>madre@ymail.com</td><td>Tutoría</td><td>23/11/2016 13:20</td></tr>
-        <tr><td><%= image_tag('email.png',size:'24') %></td><td>José García</td><td>RE: RV: Nuevos horarios </td><td>21/11/2016 13:29</td></tr>
-      </table>
-      
-
-  </div>
- 
- <% else %>
-   <div class="row">
-      <table class="table">
-        <thead><th></th><th>Autor </th><th> Asunto </th><th>Fecha</th></thead>
-        
-        <tr><td><%= image_tag('email.png',size:'24') %></td><td>aorientador@gmail.com</td><td>RV: Tutoría </td><td>23/11/2016 13:40</td></tr>
-        
-      </table>
-      
-      
-
-  </div>
+<% elsif current_user.rol=='familia' %>
+    <%= render 'buzon3' %>
  <% end %>
  </div>
+
+

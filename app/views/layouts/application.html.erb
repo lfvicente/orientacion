@@ -24,8 +24,8 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
-              <li><%= link_to current_user.rol,   '#' %></li>
-                <% if current_user.rol=='orientador' %>
+              <li><%= link_to current_user.rol.upcase  %></li>
+                <% if (current_user.rol=='orientador' || current_user.rol=='docente')  %>
                   <li><%= link_to "Plan",   'plan' %></li>
                   <li><%= link_to "Alumnos",   'alumnos' %></li>              
                 <% end %>
@@ -33,8 +33,8 @@
             <% end %>
 			
             <li><%= link_to "Blog", 'blog' %></li>
-            <li><%= link_to "Avisos", '#' %></li>
-            <li><%= link_to "Recursos", '#' %></li>
+            <li><%= link_to "Avisos", 'avisos' %></li>
+            
 
             <% if logged_in? %>
               <li><%= link_to "Cerrar Sesión", logout_path, method: "delete" %></li>
